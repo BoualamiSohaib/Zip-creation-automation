@@ -1,5 +1,6 @@
 import os
 import zipfile
+import shutil
 
 def fileExist():
     file = input("Please enter the file or Folder path: ")
@@ -16,12 +17,13 @@ def fileExist():
         return None
 
 def createZip(toZip):
-    zipName = input("input name for the zip file: ") + ".zip"
-     
+    zipName = input("Input name for the zip file: ") + ".zip"
 
 
 def main():
     toZip = fileExist()
-    createZip(toZip)
+    if toZip:
+        zip_file = createZip(toZip)
+
 
 main()
